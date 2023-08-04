@@ -1,20 +1,23 @@
 import { Panel } from "reactflow";
 
-export const AddNode = ({ onConnectEnd }: { onConnectEnd: any }) => {
+export const AddNode = ({ createNode }: { createNode: any }) => {
+  
   return (
     <Panel position="top-right">
       <div className="addNodeContainer">
         <p className="tHeader">Add Node</p>
         <hr />
-        <div className="d-flex align-items-center justify-content-center">
-          <button className="react-terminal terminalBtn" onClick={onConnectEnd}>
+        <div>
+          <button className="react-terminal terminalBtn" onClick={createNode}>
+            <div className="inner"></div>
             Terminal
           </button>
-          <button className="react-process process" onClick={onConnectEnd}>
+          <button className="react-process process" onClick={createNode}>
+            <div className="inner"></div>
             Process
           </button>
-          <button className="react-decision decision" onClick={onConnectEnd}>
-            Decision
+          <button className="react-decision decision" onClick={createNode}>
+            <div className="inner"></div> Decision
           </button>
         </div>
       </div>

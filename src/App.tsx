@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -6,35 +6,28 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   addEdge,
-  useReactFlow,
-  Panel,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import CustomNode, { FullPyramid } from "./component/CustomNode";
+import { FullPyramid } from "./component/CustomNode";
 import { nodes as initialNodes } from "./component/InitialElements/Nodes";
 import { edges as initialEdges } from "./component/InitialElements/Edges";
 import { AddNode } from "./component/AddNode";
 const nodeTypes = {
-  custom: CustomNode,
   pyramid: FullPyramid,
 };
-const getId = () => `node-${Math.random()}`;
+const getId = () => `node-${(Math.random() * 100).toFixed(2)}`;
+
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState<any>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const reactFlowWrapper = useRef<any>(null);
   const connectingNodeId = useRef<any>(null);
-  // const { project } = useReactFlow();
   const onConnect = useCallback(
     (params: any) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
   );
-
-  const onConnectStart = useCallback((_: any, { nodeId }: { nodeId: any }) => {
-    connectingNodeId.current = nodeId;
-  }, []);
-  const onConnectEnd = useCallback((event: any) => {
-    console.log(" event.target", event.target.classList);
+  const createNode = useCallback((event: any) => {
+   
 
     const targetIsPaneTerminal =
       event.target.classList.contains("react-terminal");
@@ -47,7 +40,7 @@ export default function App() {
       const curveNodeStart = {
         background: "#ffd233",
         color: "black",
-        width: 70,
+        // width: 70,
         borderRadius: "18px",
       };
       const { top, left } = reactFlowWrapper.current.getBoundingClientRect();
@@ -56,10 +49,10 @@ export default function App() {
       const newNode = {
         id,
         position: {
-          x: event.clientX - left - 75,
-          y: event.clientY - top,
+          x: event.clientX - left - 1000,
+          y: event.clientY - top + 200,
         },
-        data: { label: `Node ${id}` },
+        data: { label: `New Node ${id}}` },
         style: curveNodeStart,
       };
 
@@ -74,17 +67,15 @@ export default function App() {
         backgroundColor: "#aff4c6",
         border: "2px solid #8cc39e ",
       };
-
       const { top, left } = reactFlowWrapper.current.getBoundingClientRect();
       const id = getId();
-
       const newNode = {
         id,
         position: {
-          x: event.clientX - left - 75,
-          y: event.clientY - top,
+          x: event.clientX - left - 1000,
+          y: event.clientY - top + 300,
         },
-        data: { label: `Node ${id}` },
+        data: { label: `New Node ${id}}` },
         style: rectangelNode,
       };
 
@@ -94,24 +85,16 @@ export default function App() {
       );
     }
     if (targetIsPaneDecision) {
-      // we need to remove the wrapper bounds, in order to get the correct position
-      const curveNodeStart = {
-        background: "#ffd233",
-        color: "black",
-        width: 70,
-        borderRadius: "18px",
-      };
       const { top, left } = reactFlowWrapper.current.getBoundingClientRect();
       const id = getId();
-
       const newNode = {
         id,
-        type:"pyramid",
+        type: "pyramid",
         position: {
-          x: event.clientX - left - 75,
-          y: event.clientY - top,
+          x: event.clientX - left - 1000,
+          y: event.clientY - top + 400,
         },
-        data: { label: `Node ${id}` },
+        data: { label: `New Node ${id}}` },
       };
 
       setNodes((nds) => nds.concat(newNode));
@@ -121,9 +104,7 @@ export default function App() {
     }
   }, []);
 
-  const addNode = () => {
-    console.log("addNode");
-  };
+  
   return (
     <div style={{ width: "100vw", height: "100vh" }} ref={reactFlowWrapper}>
       <ReactFlow
@@ -132,14 +113,10 @@ export default function App() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        onConnectStart={onConnectStart}
-        onConnectEnd={onConnectEnd}
-        // onClickCapture={onConnectEnd}
-        // onPaneClick={onConnectEnd}
         fitView
         nodeTypes={nodeTypes}
       >
-        <AddNode onConnectEnd={onConnectEnd} />
+        <AddNode createNode={createNode} />
         <Controls />
         <MiniMap />
         <Background gap={12} size={1} />
