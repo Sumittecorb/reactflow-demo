@@ -12,7 +12,7 @@ export function FullPyramid({ id, data }: { id: string; data: any }) {
             color: "black",
           }}
         >
-          {data.title}
+          {data.label}
         </div>
         <Handle
           type="source"
