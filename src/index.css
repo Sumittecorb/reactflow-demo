@@ -11,3 +11,81 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.degreeSquare{
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  background-color: #aff4c6;
+  border: 2px solid #8cc39e  ;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.addNodeContainer{
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+.addNodeContainer .tHeader{
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px;
+}
+.addNodeContainer button.terminalBtn {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.addNodeContainer button.terminalBtn .inner {
+  height: 20px;
+  width: 50px;
+  margin-right: 10px;
+  background-color: rgba(255, 166, 0, 0.723);
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border-radius: 20px;
+}
+.addNodeContainer button.process {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.addNodeContainer button.process .inner{
+  height: 18px;
+  width: 50px;
+  margin:10px 10px 20px 0px;
+  background-color: #aff4c6;
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border: 2px solid #8cc39e ;
+}
+.addNodeContainer button.decision{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 10px 20px;
+  cursor: pointer;
+
+}
+.addNodeContainer button.decision .inner{
+  height: 30px;
+  width: 20px;
+  margin-right: 25px;
+  transform: rotate(45deg);
+  background-color: #ec858a;
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+}
