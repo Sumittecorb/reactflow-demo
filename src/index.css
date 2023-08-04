@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.degreeSquare{
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  background-color: #aff4c6;
+  border: 2px solid #8cc39e  ;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
