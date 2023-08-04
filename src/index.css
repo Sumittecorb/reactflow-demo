@@ -20,5 +20,43 @@ code {
   border: 2px solid #8cc39e  ;
   display:flex;
   align-items:center;
-  justify-content:center
+  justify-content:center;
+}
+.addNodeContainer{
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+.addNodeContainer .tHeader{
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px;
+}
+.addNodeContainer button.terminalBtn{
+  background-color: rgba(255, 166, 0, 0.723);
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border-radius: 20px;
+}
+.addNodeContainer button.process{
+  background-color: #8cc39e;
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border-radius: 20px;
+}
+.addNodeContainer button.decision{
+  background-color: #ec858a;
+  color: black;
+  border: none;
+  padding: 7px 12px 7px 12px;
+  border-radius: 20px;
+}
+.addNodeContainer button:nth-child(1){
+  margin-right: 10px;
+}
+.addNodeContainer button:nth-child(2){
+  margin-right: 10px;
 }

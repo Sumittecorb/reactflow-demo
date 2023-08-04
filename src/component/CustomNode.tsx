@@ -25,9 +25,9 @@ function Select({
   handleId,
   nodeId,
 }: {
-  value: string;
-  handleId: string;
-  nodeId: string;
+  value?: string;
+  handleId?: any;
+  nodeId?: string;
 }) {
   const { setNodes } = useReactFlow();
   const store = useStoreApi();
@@ -66,7 +66,7 @@ function Select({
   );
 }
 
-function CustomNode({ id, data }: { id: string; data: any }) {
+function CustomNode({ id, data }: { id?: string; data?: any }) {
   return (
     <>
       <div className="custom-node__header">
