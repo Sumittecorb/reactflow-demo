@@ -38,7 +38,7 @@ export const nodes = [
     id: "node-1",
     type: "start",
     data: {
-      title: "User",
+      label: "User",
     },
     style: curveNodeStart,
     position: { x: -100, y: 0 },
@@ -51,7 +51,7 @@ export const nodes = [
     id: "node-2",
     type: "",
     data: {
-      title: "Parent",
+      label: "Parent",
     },
     style: rectangelNode,
     position: { x: 50, y: 0 },
@@ -63,7 +63,7 @@ export const nodes = [
     id: "node-3",
     type: "pyramid",
     data: {
-      title: "New User/Existing User",
+      label: "New User/Existing User",
     },
     position: { x: 250, y: -32 },
     draggable: true,
@@ -72,7 +72,7 @@ export const nodes = [
     id: "node-4",
     type: "",
     data: {
-      title: "SignUp and Enter Details",
+      label: "SignUp and Enter Details",
     },
     style: rectangelNode,
     position: { x: 225, y: -200 },
@@ -84,7 +84,7 @@ export const nodes = [
     id: "node-5",
     type: "",
     data: {
-      title: "Existing User",
+      label: "Existing User",
     },
     className: "circle",
     style: rectangelNode,
@@ -96,7 +96,7 @@ export const nodes = [
     id: "node-6",
     type: "",
     data: {
-      title: "Login Through Email and Password",
+      label: "Login Through Email and Password",
     },
     style: rectangelNode,
     position: { x: 700, y: 0 },
@@ -108,7 +108,7 @@ export const nodes = [
     id: "node-7",
     type: "pyramid",
     data: {
-      title: "Check the Validation",
+      label: "Check the Validation",
     },
     position: { x: 950, y: -50 },
     draggable: true,
@@ -117,7 +117,7 @@ export const nodes = [
     id: "node-8",
     type: "",
     data: {
-      title: "Logged In",
+      label: "Logged In",
     },
     style: rectangelNode,
     position: { x: 1150, y: 0 },
@@ -129,7 +129,7 @@ export const nodes = [
     id: "node-9",
     type: "input",
     data: {
-      title: "Home Screen",
+      label: "Home Screen",
     },
     style: ovalNode,
     position: { x: 1350, y: 0 },
@@ -141,7 +141,7 @@ export const nodes = [
     id: "node-10",
     type: "",
     data: {
-      title: "Partnership",
+      label: "Partnership",
     },
     style: rectangelNode,
     position: { x: 1350, y: -200 },
@@ -155,7 +155,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Search Daycare",
+      label: "Search Daycare",
     },
     position: { x: 1550, y: 0 },
     sourcePosition: Position.Right,
@@ -167,7 +167,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Providers",
+      label: "Providers",
     },
     position: { x: 1550, y: -200 },
     sourcePosition: Position.Right,
@@ -179,7 +179,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Forgot Password",
+      label: "Forgot Password",
     },
     position: { x: 950, y: 200 },
     sourcePosition: Position.Right,
@@ -191,7 +191,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Reset Password",
+      label: "Reset Password",
     },
     position: { x: 1150, y: 200 },
     sourcePosition: Position.Right,
@@ -203,7 +203,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Profile Section",
+      label: "Profile Section",
     },
     position: { x: 1350, y: 200 },
     sourcePosition: Position.Right,
@@ -214,7 +214,7 @@ export const nodes = [
     id: "node-16",
     type: "pyramid",
     data: {
-      title: "Search API and List of the Daycare",
+      label: "Search API and List of the Daycare",
     },
     position: { x: 1550, y: 200 },
     draggable: true,
@@ -224,7 +224,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Enter Email",
+      label: "Enter Email",
     },
     position: { x: 950, y: 400 },
     sourcePosition: Position.Right,
@@ -236,7 +236,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Link set for Verification",
+      label: "Link set for Verification",
     },
     position: { x: 1150, y: 400 },
     sourcePosition: Position.Right,
@@ -248,7 +248,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Profile edited and Update",
+      label: "Profile edited and Update",
     },
     position: { x: 1150, y: 600 },
     sourcePosition: Position.Right,
@@ -259,7 +259,7 @@ export const nodes = [
     id: "node-20",
     type: "pyramid",
     data: {
-      title: "Edit Profile Change Password setting Logout",
+      label: "Edit Profile Change Password setting Logout",
     },
     position: { x: 1350, y: 600 },
     draggable: true,
@@ -269,7 +269,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Detail Page of Daycare ",
+      label: "Detail Page of Daycare ",
     },
     position: { x: 1550, y: 600 },
     sourcePosition: Position.Right,
@@ -280,7 +280,7 @@ export const nodes = [
     id: "node-22",
     type: "pyramid",
     data: {
-      title: "Enter enquiry Form and Click on submit",
+      label: "Enter enquiry Form and Click on submit",
     },
     position: { x: 1750, y: 600 },
     draggable: true,
@@ -290,7 +290,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Request Submitted",
+      label: "Request Submitted",
     },
     position: { x: 1950, y: 600 },
     sourcePosition: Position.Right,
@@ -302,7 +302,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Logout ",
+      label: "Logout ",
     },
     position: { x: 1350, y: 800 },
     sourcePosition: Position.Right,
@@ -314,7 +314,7 @@ export const nodes = [
     type: "",
     style: rectangelNode,
     data: {
-      title: "Change Password",
+      label: "Change Password",
     },
     position: { x: 1550, y: 800 },
     sourcePosition: Position.Right,
@@ -326,7 +326,7 @@ export const nodes = [
     type: "",
     style: curveNodeEnd,
     data: {
-      title: "End",
+      label: "End",
     },
     position: { x: 1350, y: 1000 },
     sourcePosition: Position.Right,
